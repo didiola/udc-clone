@@ -1,14 +1,16 @@
-@media screen and (min-width:768px){
+@media (min-width:768px){
     .mid-match{
-        .list-item3 h1{
-            font-size: 7rem!important;
-            letter-spacing: 1px!important;
-        }
+        .list {
+            .list-item3 h1{
+                font-size: 7rem;
+                letter-spacing: 1px;
+            }
 
-        .cta{
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            .cta{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
         }
     }
 }
