@@ -1,4 +1,5 @@
 @import 'config';
+@import 'nav';
 
 *{
     box-sizing: border-box;
@@ -17,25 +18,29 @@ body{
 }
 
 header{
-    width: 300px;
-}
+    background-color: #262626;
 
-.header-container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    li {
+        list-style: none;
 
-    .nav-menu ul{
-        display: block;
-        list-style-type: none;
+        a {
+             text-decoration: none;
+        }
+    }
+    .hamburger{
+        display:block;
 
-        li a{
-            text-decoration: none;
-            color: #000;
+        .hamburger.active .bar:nth-child(2){
+            opacity:0;
+          }
+          .hamburger.active .bar:nth-child(1){
+            transform:translateY(8px) rotate(45deg);
+          }
+          .hamburger.active .bar:nth-child(3){
+            transform:translateY(-8px) rotate(-45deg);
         }
     }
 }
-
 .mid-match{
     display: block;
     text-align: center;
@@ -72,7 +77,6 @@ header{
             width: 100%;
             padding: 20px;
             margin-bottom: 20px;
-            color: red;
         }
 
         .cta{
@@ -145,8 +149,10 @@ header{
     .text4 {
         text-align: center;
 
-        .box{
-            @include heading;
+        h3{
+            font-size: 26px;
+            word-spacing: 2px;
+            margin-bottom: 15px;
         }
 
         p{
@@ -246,6 +252,7 @@ header{
         background-color: hsla(0, 0%, 100%, 0.43);
         padding: 30px 70px;
         margin-bottom: 30px;
+        border-radius: 20px;
 
         .sponsors-container{
             border: 1px solid #fff;

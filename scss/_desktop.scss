@@ -1,16 +1,147 @@
 @media (min-width:768px){
+    header{
+        background-color: #262626;
+
+    li {
+        list-style: none;
+
+        a {
+            color: #fff;
+             text-decoration: none;
+        }
+    }
+    .navbar {
+        min-height: 70px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 24px;
+
+        .nav-menu{
+            display:flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 60px;
+
+            .nav-link{
+                transition: 0.7s ease;
+              }
+              
+              .nav-link:hover{
+                color: dodgerblue;
+              }
+        }
+        .hamburger{
+            display: none;
+            cursor:pointer
+            
+            .bar{
+                display:block;
+                width:25px;
+                height:3px;
+                margin:5px auto;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                background-color:green;
+            }
+        }
+      }
+    }
     .mid-match{
         .list {
             .list-item3 h1{
-                font-size: 7rem;
-                letter-spacing: 1px;
+                font-size: 5.5rem;
+                line-height: 100px;
             }
 
             .cta{
                 display: flex;
-                align-items: center;
-                justify-content: space-between;
+                flex-direction: row;
+                gap: 20px;
+
+                .cta-button{
+                    margin-bottom: 10px;
+                }
             }
+        }
+    }
+
+    .connect{
+        margin: 250px ;
+
+        .text{
+            // padding: 0px;
+
+            h2{
+                font-size: 60px;
+                letter-spacing: -3px;
+                text-align: left;
+                font-weight: 900;
+                line-height: 60px;
+                margin-bottom: 40px;
+            }
+
+            p{
+                display: block;
+                font-weight: 400;
+                font-size: 16px;
+                text-align: left;
+                line-height: 30px;
+                color: #282829;
+                margin-top: 20px;
+            }
+        }
+    }
+
+    .speakers{
+        .text4{
+            h3{
+                font-size: 50px;
+                font-weight: bolder;
+            }
+        }
+
+        .pic{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+    }
+
+    .why{
+        margin-top: 250px;
+
+        .source-container{
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+
+            .top{
+                h3{
+                    font-size: 48px;
+                    line-height: 70px;
+                }
+            }
+
+            .sources-container{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 30px;
+            }
+        }
+    }
+
+    .sponsors{
+        margin-top: 250px;
+
+        h1{
+            font-size: 46px;
+        }
+
+        .box-grid{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
         }
     }
 }
