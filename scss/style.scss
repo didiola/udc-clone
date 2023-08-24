@@ -62,8 +62,12 @@ header{
         .text-block2{
             font-size: 12px;
             text-align: center;
-            letter-spacing: 4px;
+            letter-spacing: 2px;
             margin-bottom: 20px;
+
+            a{
+                color: #000;
+            }
             
         }
 
@@ -268,6 +272,22 @@ header{
                 max-width: 100%;
             }
         }
+
+        .act-button{
+            display: block;
+            text-align: center;
+            margin-top: 50px;
+            margin-bottom: 20px;
+
+            .sponsor-btn{
+                border-radius: 20px;
+                background-color:  #fff;
+                color: #000;
+                padding: 10px 30px;
+                text-decoration: none;
+                box-shadow: 5px 4px 0 1px #000;
+            }
+        }
     }
 }
 
@@ -287,6 +307,7 @@ header{
         .uppercut ul{
             list-style-type: none;
             text-align: center;
+            margin-bottom: 30px;
 
             li{
                 margin-bottom: 10px;                
@@ -294,11 +315,6 @@ header{
                     color: #fff;
                 }
             }
-        }
-
-        .two,
-        .three{
-            margin-top: 30px;
         }
 
         .lower-cut{

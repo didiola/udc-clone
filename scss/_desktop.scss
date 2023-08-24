@@ -133,13 +133,21 @@
         margin-top: 250px;
 
         h1{
-            font-size: 46px;
+            font-size: 48px;
+            margin-bottom: 60px;
         }
 
         .box-grid{
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 20px;
+        }
+    }
+
+    .footer-container{
+        .uppercut{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
         }
     }
 }
