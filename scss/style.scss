@@ -1,14 +1,14 @@
 @import 'config';
 @import 'nav';
 
-*{
+* {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     // font-family: 'Bricolage Grotesque', sans-serif;
 }
 
-body{
+body {
     background-image: url(/Images/line-bg.png);
     background-position: 50% 50%;
     background-repeat: no-repeat;
@@ -17,61 +17,90 @@ body{
     margin: 30px 30px 0px;
 }
 
-header{
+header {
     background-color: transparent;
 
     li {
         list-style: none;
 
         a {
-             text-decoration: none;
+            text-decoration: none;
         }
     }
-    .hamburger{
-        display:block;
 
-        .hamburger.active .bar:nth-child(2){
-            opacity:0;
-          }
-          .hamburger.active .bar:nth-child(1){
-            transform:translateY(8px) rotate(45deg);
-          }
-          .hamburger.active .bar:nth-child(3){
-            transform:translateY(-8px) rotate(-45deg);
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-menu {
+        display: none;
+    }
+
+    .hamburger {
+        display: block;
+
+        .bar:nth-child(even) {
+            margin: 4px 0 4px;
+        }
+
+        .bar {
+            display: block;
+            width: 20px;
+            height: 3px;
+            background-color: #fff;
+            transition: all 0.3s;
+        }
+    }
+
+    .hamburger.active {
+
+        .bar:nth-child(2) {
+            opacity: 0;
+        }
+
+        .bar:nth-child(1) {
+            transform: rotate(45deg) translateY(9.5px) ;
+        }
+
+        .bar:nth-child(3) {
+            transform: rotate(-45deg) translateY(-9.5px) ;
         }
     }
 }
-.mid-match{
+
+.mid-match {
     display: block;
     text-align: center;
     margin-top: 50px;
 
-    .list{
+    .list {
         list-style-type: none;
 
-        .list-item{
+        .list-item {
             margin-bottom: 30px;
         }
 
-        .text-block{
+        .text-block {
             border-radius: 20px;
             border: 1px solid #000;
             padding: 10px 10px;
         }
 
-        .text-block2{
+        .text-block2 {
             font-size: 12px;
             text-align: center;
             letter-spacing: 2px;
             margin-bottom: 20px;
 
-            a{
+            a {
                 color: #000;
             }
-            
+
         }
 
-        .list-item3 h1{
+        .list-item3 h1 {
             font-size: 50px;
             font-weight: 800;
             line-height: 50px;
@@ -83,26 +112,26 @@ header{
             margin-bottom: 20px;
         }
 
-        .cta{
+        .cta {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            
-            .main-button{
+
+            .main-button {
                 border-radius: 20px;
-                background-color:  #fff;
+                background-color: #fff;
                 color: #000;
                 padding: 10px 30px;
                 text-decoration: none;
                 box-shadow: 5px 4px 0 1px #000;
                 margin-bottom: 20px;
             }
-            
-            .cta-button{
+
+            .cta-button {
                 border: 2px solid #000;
                 border-radius: 20px;
-                background-color:  transparent;
+                background-color: transparent;
                 color: #000;
                 padding: 10px 20px;
                 text-decoration: none;
@@ -111,7 +140,7 @@ header{
     }
 }
 
-.illus{
+.illus {
     margin-right: auto;
     margin-left: auto;
     display: block;
@@ -119,21 +148,21 @@ header{
     overflow: visible;
     margin-top: 40px;
 
-    img{
+    img {
         max-width: 100%;
         vertical-align: middle;
     }
 }
 
-.text{
+.text {
     margin-top: 100px;
     font-family: $font-stack;
 
-    h2{
+    h2 {
         @include heading;
     }
 
-    p{
+    p {
         font-size: 14px;
         text-align: justify;
         margin-bottom: 12px;
@@ -142,7 +171,7 @@ header{
     }
 }
 
-.speakers{
+.speakers {
     margin-top: 100px;
     display: flex;
     align-items: center;
@@ -153,53 +182,54 @@ header{
     .text4 {
         text-align: center;
 
-        h3{
+        h3 {
             font-size: 26px;
             word-spacing: 2px;
             margin-bottom: 15px;
         }
 
-        p{
+        p {
             font-size: 14px;
             margin-bottom: 50px;
         }
     }
 
-    .pic{
+    .pic {
         margin-top: 20px;
         margin-left: 30px;
         margin-right: 30px;
 
-        .big{
+        .big {
             margin-top: 10px;
             margin-bottom: 10px;
         }
 
-        .small{
+        .small {
             font-size: 14px;
             margin-bottom: 20px;
         }
 
     }
-        .link {
-            margin-top: 40px;
-        }
-        
-            a{
-            border-radius: 20px;
-                background-color:  #000;
-                color: #fff;
-                padding: 10px 30px;
-                text-decoration: none;
-                box-shadow: 5px 4px 0 1px #fff;
-        }
+
+    .link {
+        margin-top: 40px;
+    }
+
+    a {
+        border-radius: 20px;
+        background-color: #000;
+        color: #fff;
+        padding: 10px 30px;
+        text-decoration: none;
+        box-shadow: 5px 4px 0 1px #fff;
+    }
 }
 
 .pencil img {
     display: none;
 }
 
-.desktop{
+.desktop {
     margin-top: 20px;
     position: relative;
     width: 100px;
@@ -207,40 +237,42 @@ header{
     right: 45px;
     float: right;
 
-    img{
+    img {
         max-width: 100%;
         vertical-align: middle;
     }
 }
 
-.why{
+.why {
     margin-top: 300px;
     font-family: $font-stack;
 
-    .source-container{
+    .source-container {
         margin-right: 30px;
         margin-left: 30px;
 
-        .top h3{
+        .top h3 {
             font-size: 24px;
             line-height: 30px;
             margin-bottom: 20px;
         }
-        .source img{
+
+        .source img {
             margin-top: 20px;
         }
-        h4{
+
+        h4 {
             margin-top: 10px;
             margin-bottom: 10px;
         }
 
-        p{
+        p {
             font-size: 14px;
         }
     }
 }
 
-.sponsors{
+.sponsors {
     margin-top: 200px;
     display: flex;
     align-items: center;
@@ -248,40 +280,40 @@ header{
     flex-direction: column;
     font-family: $font-stack;
 
-    h1{
+    h1 {
         @include heading;
     }
 
-    .box{
+    .box {
         background-color: hsla(0, 0%, 100%, 0.43);
         padding: 30px 70px;
         margin-bottom: 30px;
         border-radius: 20px;
 
-        .sponsors-container{
+        .sponsors-container {
             border: 1px solid #fff;
             padding: 10px 15px;
             border-radius: 10px;
             margin-bottom: 10px;
         }
 
-        .rounded{
+        .rounded {
             width: 200px;
 
-            img{
+            img {
                 max-width: 100%;
             }
         }
 
-        .act-button{
+        .act-button {
             display: block;
             text-align: center;
             margin-top: 50px;
             margin-bottom: 20px;
 
-            .sponsor-btn{
+            .sponsor-btn {
                 border-radius: 20px;
-                background-color:  #fff;
+                background-color: #fff;
                 color: #000;
                 padding: 10px 30px;
                 text-decoration: none;
@@ -291,10 +323,10 @@ header{
     }
 }
 
-.footer{
+.footer {
     font-family: $font-stack;
 
-    .footer-container{
+    .footer-container {
         background-color: #000;
         color: #fff;
         display: flex;
@@ -304,30 +336,31 @@ header{
         padding: 50px 20px;
         border-radius: 30px 30px 0 0;
 
-        .uppercut ul{
+        .uppercut ul {
             list-style-type: none;
             text-align: center;
             margin-bottom: 30px;
 
-            li{
-                margin-bottom: 10px;                
-                a{
+            li {
+                margin-bottom: 10px;
+
+                a {
                     color: #fff;
                 }
             }
         }
 
-        .lower-cut{
+        .lower-cut {
             margin-top: 50px;
             text-align: center;
             font-size: 14px;
 
-            .grey p{
+            .grey p {
                 color: #808080;
                 margin-bottom: 40px;
             }
 
-            .yellow a{
+            .yellow a {
                 color: $background-color;
             }
         }
